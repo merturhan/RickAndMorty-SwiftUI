@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE33E34A29C8B5D8005AC290 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33E34929C8B5D8005AC290 /* CharacterView.swift */; };
+		EE33E34E29C8C44B005AC290 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33E34D29C8C44B005AC290 /* LocationModel.swift */; };
+		EE33E35029C8C4BF005AC290 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33E34F29C8C4BF005AC290 /* CharacterModel.swift */; };
+		EE33E35229C8C4CC005AC290 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33E35129C8C4CC005AC290 /* LocationViewModel.swift */; };
+		EE33E35429C8C4D4005AC290 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE33E35329C8C4D4005AC290 /* CharacterViewModel.swift */; };
 		EEA8D3FE29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D3FD29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift */; };
 		EEA8D40029C85B1800D07D42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D3FF29C85B1800D07D42 /* MainView.swift */; };
 		EEA8D40229C85B1900D07D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA8D40129C85B1900D07D42 /* Assets.xcassets */; };
@@ -18,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE33E34929C8B5D8005AC290 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		EE33E34D29C8C44B005AC290 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		EE33E34F29C8C4BF005AC290 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		EE33E35129C8C4CC005AC290 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		EE33E35329C8C4D4005AC290 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		EEA8D3FA29C85B1800D07D42 /* RickAndMorty-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RickAndMorty-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA8D3FD29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty_SwiftUIApp.swift; sourceTree = "<group>"; };
 		EEA8D3FF29C85B1800D07D42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -81,6 +91,8 @@
 		EEA8D40C29C8613100D07D42 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE33E34D29C8C44B005AC290 /* LocationModel.swift */,
+				EE33E34F29C8C4BF005AC290 /* CharacterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +103,7 @@
 				EEA8D3FF29C85B1800D07D42 /* MainView.swift */,
 				EEA8D40F29C8614D00D07D42 /* SplashScreenView.swift */,
 				EEA8D41A29C87EFB00D07D42 /* HomeScreen.swift */,
+				EE33E34929C8B5D8005AC290 /* CharacterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,6 +111,8 @@
 		EEA8D40E29C8613B00D07D42 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EE33E35129C8C4CC005AC290 /* LocationViewModel.swift */,
+				EE33E35329C8C4D4005AC290 /* CharacterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -182,9 +197,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEA8D41629C864F500D07D42 /* DataController.swift in Sources */,
+				EE33E35029C8C4BF005AC290 /* CharacterModel.swift in Sources */,
 				EEA8D41929C8662300D07D42 /* DataModel.xcdatamodeld in Sources */,
+				EE33E35429C8C4D4005AC290 /* CharacterViewModel.swift in Sources */,
+				EE33E34A29C8B5D8005AC290 /* CharacterView.swift in Sources */,
+				EE33E35229C8C4CC005AC290 /* LocationViewModel.swift in Sources */,
 				EEA8D41B29C87EFB00D07D42 /* HomeScreen.swift in Sources */,
 				EEA8D41029C8614D00D07D42 /* SplashScreenView.swift in Sources */,
+				EE33E34E29C8C44B005AC290 /* LocationModel.swift in Sources */,
 				EEA8D40029C85B1800D07D42 /* MainView.swift in Sources */,
 				EEA8D3FE29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift in Sources */,
 			);

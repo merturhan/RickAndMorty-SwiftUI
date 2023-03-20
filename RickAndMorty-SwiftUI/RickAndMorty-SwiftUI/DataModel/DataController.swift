@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 
+//CoreData is used for only check whether first launch or not
 class DataController : NSObject, ObservableObject{
     let container = NSPersistentContainer(name: "DataModel")
     
@@ -36,11 +37,4 @@ class DataController : NSObject, ObservableObject{
         
         save(context: context)
     }
-    
-//    func toggleDecider(decider : Decider, context: NSManagedObjectContext){
-//        decider.isFirstLaunch.toggle()
-//        print("Now decider is = \(decider.isFirstLaunch)")
-//        save(context: context)
-//    }
-    
 }

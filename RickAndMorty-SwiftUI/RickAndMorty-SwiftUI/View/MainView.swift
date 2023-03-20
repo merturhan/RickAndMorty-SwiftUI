@@ -34,7 +34,7 @@ struct MainView: View {
             
             //After SplashScreenView
             else{
-                EmptyView()
+                HomeScreen()
             }
         }
         //SplashScreenView countdown

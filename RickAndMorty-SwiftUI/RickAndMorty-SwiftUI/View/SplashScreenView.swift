@@ -32,6 +32,6 @@ struct SplashScreenView: View {
 
 struct BackgroundView_Previews: PreviewProvider {
     static var previews: some View {
-        SplashScreenView(splashScreenText:  "Welcome !")
+        SplashScreenView(splashScreenText: "Welcome!")
     }
 }

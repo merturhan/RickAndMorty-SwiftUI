@@ -9,7 +9,55 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+   
+        ZStack{
+            
+            NavigationStack{
+                
+                ScrollView(.horizontal, showsIndicators: false){
+                        HStack{
+                            Button("Earth (C-317)"){
+                                
+                            }.buttonStyle(.bordered)
+                                .foregroundColor(.black)
+                            Button("Earth (C-317)"){
+                                
+                            }.buttonStyle(.bordered)
+                                .foregroundColor(.black)
+                            Button("Earth (C-317)"){
+                                
+                            }.buttonStyle(.bordered)
+                                .foregroundColor(.black)
+                            Button("Earth (C-317)"){
+                                
+                            }.buttonStyle(.bordered)
+                                .foregroundColor(.black)
+                        }
+                }.padding()
+                
+                ScrollView{
+                    VStack{
+                        Text("asdasd")
+                        Text("asdasd")
+                        Text("asdasd")
+                    }
+                    
+                }
+                
+                    .toolbar{
+                        ToolbarItem(placement : .automatic){
+                            Image("logo")
+                                .resizable()
+                                .scaledToFit()
+                        }
+                    }
+                
+                
+            }
+            
+        }
+        
+        
     }
 }
 
@@ -18,3 +66,4 @@ struct HomeScreen_Previews: PreviewProvider {
         HomeScreen()
     }
 }
+
