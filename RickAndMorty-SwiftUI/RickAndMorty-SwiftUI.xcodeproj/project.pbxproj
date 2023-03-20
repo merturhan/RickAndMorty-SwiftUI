@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		EEA8D3FE29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D3FD29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift */; };
-		EEA8D40029C85B1800D07D42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D3FF29C85B1800D07D42 /* ContentView.swift */; };
+		EEA8D40029C85B1800D07D42 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D3FF29C85B1800D07D42 /* MainView.swift */; };
 		EEA8D40229C85B1900D07D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA8D40129C85B1900D07D42 /* Assets.xcassets */; };
 		EEA8D40529C85B1900D07D42 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA8D40429C85B1900D07D42 /* Preview Assets.xcassets */; };
+		EEA8D41029C8614D00D07D42 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D40F29C8614D00D07D42 /* SplashScreenView.swift */; };
+		EEA8D41629C864F500D07D42 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D41529C864F500D07D42 /* DataController.swift */; };
+		EEA8D41929C8662300D07D42 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D41729C8662300D07D42 /* DataModel.xcdatamodeld */; };
+		EEA8D41B29C87EFB00D07D42 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8D41A29C87EFB00D07D42 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EEA8D3FA29C85B1800D07D42 /* RickAndMorty-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RickAndMorty-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA8D3FD29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty_SwiftUIApp.swift; sourceTree = "<group>"; };
-		EEA8D3FF29C85B1800D07D42 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EEA8D3FF29C85B1800D07D42 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		EEA8D40129C85B1900D07D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEA8D40429C85B1900D07D42 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EEA8D40F29C8614D00D07D42 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		EEA8D41529C864F500D07D42 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		EEA8D41829C8662300D07D42 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EEA8D41A29C87EFB00D07D42 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				EEA8D3FD29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift */,
-				EEA8D3FF29C85B1800D07D42 /* ContentView.swift */,
+				EEA8D41429C864D800D07D42 /* DataModel */,
+				EEA8D40D29C8613600D07D42 /* View */,
+				EEA8D40E29C8613B00D07D42 /* ViewModel */,
+				EEA8D40C29C8613100D07D42 /* Model */,
 				EEA8D40129C85B1900D07D42 /* Assets.xcassets */,
 				EEA8D40329C85B1900D07D42 /* Preview Content */,
 			);
@@ -65,6 +76,39 @@
 				EEA8D40429C85B1900D07D42 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EEA8D40C29C8613100D07D42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEA8D40D29C8613600D07D42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEA8D3FF29C85B1800D07D42 /* MainView.swift */,
+				EEA8D40F29C8614D00D07D42 /* SplashScreenView.swift */,
+				EEA8D41A29C87EFB00D07D42 /* HomeScreen.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EEA8D40E29C8613B00D07D42 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EEA8D41429C864D800D07D42 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EEA8D41529C864F500D07D42 /* DataController.swift */,
+				EEA8D41729C8662300D07D42 /* DataModel.xcdatamodeld */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEA8D40029C85B1800D07D42 /* ContentView.swift in Sources */,
+				EEA8D41629C864F500D07D42 /* DataController.swift in Sources */,
+				EEA8D41929C8662300D07D42 /* DataModel.xcdatamodeld in Sources */,
+				EEA8D41B29C87EFB00D07D42 /* HomeScreen.swift in Sources */,
+				EEA8D41029C8614D00D07D42 /* SplashScreenView.swift in Sources */,
+				EEA8D40029C85B1800D07D42 /* MainView.swift in Sources */,
 				EEA8D3FE29C85B1800D07D42 /* RickAndMorty_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +385,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EEA8D41729C8662300D07D42 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEA8D41829C8662300D07D42 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EEA8D41829C8662300D07D42 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EEA8D3F229C85B1800D07D42 /* Project object */;
 }
