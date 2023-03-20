@@ -11,10 +11,11 @@ import SwiftUI
 struct RickAndMorty_SwiftUIApp: App {
     
     @StateObject private var dataController = DataController()
+    @StateObject private var locationViewModel = LocationViewModel()
     
     var body: some Scene {
         WindowGroup {
-            MainView().environment(\.managedObjectContext, dataController.container.viewContext)
+            MainView(lvm: locationViewModel).environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

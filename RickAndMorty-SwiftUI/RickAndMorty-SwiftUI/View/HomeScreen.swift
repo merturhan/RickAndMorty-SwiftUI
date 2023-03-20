@@ -20,6 +20,7 @@ struct HomeScreen: View {
                                 
                             }.buttonStyle(.bordered)
                                 .foregroundColor(.black)
+
                             Button("Earth (C-317)"){
                                 
                             }.buttonStyle(.bordered)

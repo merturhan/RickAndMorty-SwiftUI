@@ -13,9 +13,10 @@ struct MainView: View {
     @FetchRequest(sortDescriptors: [])
     var decider : FetchedResults<Decider>
     
+    @ObservedObject var lvm : LocationViewModel
+    
     @State private var isFirstLaunch : Bool = true
     @State private var isActiveSplashScreen: Bool = true
-    @State private var isNavigationViewStart : Bool = false
     
     var body: some View {
         
@@ -25,9 +26,25 @@ struct MainView: View {
             if(isActiveSplashScreen){
                 if(decider.isEmpty){
                     SplashScreenView(splashScreenText: "Welcome!")
+                        .task {
+                            do{
+                                try await lvm.getAllLocations()
+                            }catch{
+                                print("error")
+                            }
+                            lvm.printAllLocations()
+                        }
                 }else{
                     if(decider.first!.isFirstLaunch == false){
                         SplashScreenView(splashScreenText: "Hello!")
+                            .task {
+                                do{
+                                    try await lvm.getAllLocations()
+                                }catch{
+                                    print("error")
+                                }
+                                lvm.printAllLocations()
+                            }
                     }
                 }
             }
@@ -39,6 +56,7 @@ struct MainView: View {
         }
         //SplashScreenView countdown
         .onAppear{
+            
             DispatchQueue.main.asyncAfter(deadline: .now()+2.5){
                 withAnimation {
                     self.isActiveSplashScreen = false
@@ -56,6 +74,6 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(lvm: LocationViewModel())
     }
 }
