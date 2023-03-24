@@ -1,17 +1,7 @@
 # RickAndMorty-SwiftUI
  2023 Çekirge Programı - USG Stajyer Challenge
 
-First Launch Splash Screen
-![Simulator Screen Shot - iPhone 11 - 2023-03-24 at 17 51 58](https://user-images.githubusercontent.com/75416429/227559552-325141e8-b3b8-476d-8d33-18e3df37cdfb.png)
 
-Launch Splash Screen, after first launch
-![Simulator Screen Shot - iPhone 11 - 2023-03-24 at 17 50 22](https://user-images.githubusercontent.com/75416429/227559804-725ed662-21c1-4ed7-b0d0-513728948c13.png)
-
-Home Screen
-![Simulator Screen Shot - iPhone 11 - 2023-03-24 at 17 50 26](https://user-images.githubusercontent.com/75416429/227560000-948a52e3-202b-4cab-a297-aaf18bbc5ac0.png)
-
-Details Screen
-![Simulator Screen Shot - iPhone 11 - 2023-03-24 at 17 50 32](https://user-images.githubusercontent.com/75416429/227560138-67ba85e3-6958-42c6-b375-52aa73d169ce.png)
-
+![Simulator Screen Shot - iPhone 11 - 2023-03-24 at 17 51 58 Medium](https://user-images.githubusercontent.com/75416429/227561670-5e25c289-bdeb-467e-8bf6-20b6ad8a1229.jpeg) ![Simulator Screen Shot - iPhone 11 - 2023-03-24 at 17 50 22 Medium](https://user-images.githubusercontent.com/75416429/227561774-6f65c217-7f31-4282-8293-472930d6cfe9.jpeg) ![Simulator Screen Shot - iPhone 11 - 2023-03-24 at 17 50 26 Medium](https://user-images.githubusercontent.com/75416429/227561892-6b2aa9e3-0d71-4651-a8ed-a4c598195e16.jpeg) ![Simulator Screen Shot - iPhone 11 - 2023-03-24 at 17 50 32 Medium](https://user-images.githubusercontent.com/75416429/227562075-a2ce4be7-25ef-40cc-9368-eddd42828a4c.jpeg)
 
 Used API : https://rickandmortyapi.com/
