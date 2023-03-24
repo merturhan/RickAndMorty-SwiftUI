@@ -21,8 +21,8 @@ public struct CharacterModel : Identifiable, Codable{
     public let url: String
     public let created: String
     
-    
 }
+
 public struct OriginModel: Codable {
     public let name: String
     public let url: String

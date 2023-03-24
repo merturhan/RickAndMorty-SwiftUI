@@ -9,29 +9,77 @@ import SwiftUI
 
 struct CharacterView: View {
     
-    var characterName : String
-    var imageName : String
+    var characterData : CharacterModel
     
+    @State private var name : String = ""
+    @State private var gender : String = ""
     
     var body: some View {
         
+        
+        
         HStack{
-            Rectangle()
-                .frame(width: 150, height: 150)
-                .padding(.leading)
+            
+            AsyncImage(url: URL(string: characterData.image)) { image in
+                image
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .padding(.leading)
+            } placeholder: {
+                ProgressView()
+            }
+            
             Spacer()
-            Text("\(characterName)")
+            Text("\(name)")
                 .font(.custom("Avenir", size: 36))
                 .bold()
                 .padding(.trailing)
         }.frame(width: UIScreen.main.bounds.size.width, height: 150)
-            .border(.red)
+            .border(.black)
+            .onAppear(){
+                name = characterData.name
+            }
+        
+        
         
     }
 }
 
-struct CharacterView_Previews: PreviewProvider {
-    static var previews: some View {
-        CharacterView(characterName: "Beth Smith", imageName: "null")
+struct ReversedCharacterView : View {
+    
+    var characterData : CharacterModel
+    @State private var name : String = ""
+    
+    var body : some View {
+        
+        
+        HStack{
+            Text("\(name)")
+                .font(.custom("Avenir", size: 36))
+                .bold()
+                .padding(.trailing)
+            Spacer()
+            AsyncImage(url: URL(string: characterData.image)) { image in
+                image
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .padding(.leading)
+            } placeholder: {
+                ProgressView()
+            }
+            
+        }.frame(width: UIScreen.main.bounds.size.width, height: 150)
+            .border(.black)
+            .onAppear(){
+                name = characterData.name
+            }
+        
+        
     }
 }
+
+//struct CharacterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CharacterView(characterData: CharacterModel())
+//    }
+//}

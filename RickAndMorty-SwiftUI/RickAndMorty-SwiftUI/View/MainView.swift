@@ -13,10 +13,14 @@ struct MainView: View {
     @FetchRequest(sortDescriptors: [])
     var decider : FetchedResults<Decider>
     
+    
     @ObservedObject var lvm : LocationViewModel
+    @ObservedObject var cvm : CharacterViewModel
     
     @State private var isFirstLaunch : Bool = true
     @State private var isActiveSplashScreen: Bool = true
+    
+    
     
     var body: some View {
         
@@ -29,21 +33,24 @@ struct MainView: View {
                         .task {
                             do{
                                 try await lvm.getAllLocations()
+                                try await cvm.getCharacters(locationID: 0, lvm: lvm)
                             }catch{
                                 print("error")
                             }
-                            lvm.printAllLocations()
+                            print(cvm.characters.count)
                         }
+
                 }else{
                     if(decider.first!.isFirstLaunch == false){
                         SplashScreenView(splashScreenText: "Hello!")
                             .task {
                                 do{
                                     try await lvm.getAllLocations()
+                                    try await cvm.getCharacters(locationID: 0, lvm: lvm)
                                 }catch{
                                     print("error")
                                 }
-                                lvm.printAllLocations()
+                                print(cvm.characters.count)
                             }
                     }
                 }
@@ -51,9 +58,10 @@ struct MainView: View {
             
             //After SplashScreenView
             else{
-                HomeScreen()
+                HomeScreen(lvm: lvm, cvm: cvm)
             }
         }
+        
         //SplashScreenView countdown
         .onAppear{
             
@@ -74,6 +82,6 @@ struct MainView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(lvm: LocationViewModel())
+        MainView(lvm: LocationViewModel(), cvm: CharacterViewModel())
     }
 }

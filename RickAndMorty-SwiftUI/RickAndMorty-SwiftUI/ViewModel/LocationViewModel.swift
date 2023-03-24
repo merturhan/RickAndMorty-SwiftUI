@@ -7,13 +7,15 @@
 
 import Foundation
 
-class LocationViewModel : ObservableObject {
+@MainActor
+public class LocationViewModel : ObservableObject {
+    
     
     @Published var locations : [LocationModel] = []
     
     public func getAllLocations() async throws {
         
-        guard let url = URL(string: "https://rickandmortyapi.com/api/locations") else{
+        guard let url = URL(string: "https://rickandmortyapi.com/api/location/[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]") else{
             fatalError("Wrong URL")
         }
         let urlRequest = URLRequest(url: url)
