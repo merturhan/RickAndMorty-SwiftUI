@@ -34,7 +34,6 @@ struct DetailsView: View {
                 } placeholder: {
                     ProgressView()
                 }
-                
                 HStack(alignment: .top){
                     VStack{
                         Text("Status:")
@@ -73,7 +72,6 @@ struct DetailsView: View {
                             .padding(.horizontal,20)
                             .padding(.bottom, 20)
                     }
-                    
                     VStack{
                         Text(status)
                             .font(.custom("Avenir", size: 22))
@@ -106,14 +104,8 @@ struct DetailsView: View {
                     }
                 }
             }
-            
-            
-            
-            
-            
                 .navigationTitle("\(name)")
         }
-        
                 .onAppear{
                     name = characterData.name
                     status = characterData.status
@@ -145,7 +137,6 @@ struct DetailsView: View {
                     let hourAMPM = createdTime.formatted(.dateTime.hour().minute().second())
                     let hour24 : String = timeConversion24(time12: hourAMPM)
                     visibleTime.append(hour24)
-                    
                 }
     }
     
