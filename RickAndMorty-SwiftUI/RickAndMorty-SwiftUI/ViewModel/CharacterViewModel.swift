@@ -26,18 +26,7 @@ class CharacterViewModel : ObservableObject{
                 fatalError("Error, data couldn't fetched")
             }
             let characterData = try JSONDecoder().decode(CharacterModel.self, from: data)
-            //print(characterData.name)
             characters.append(characterData)
-        }
-    }
-    
-    public func printCharacters(){
-        if(characters.isEmpty){
-            print("empty")
-        }else{
-            for ch in characters{
-                print(ch.name)
-            }
         }
     }
     

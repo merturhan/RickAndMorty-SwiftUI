@@ -10,7 +10,6 @@ import Foundation
 @MainActor
 public class LocationViewModel : ObservableObject {
     
-    
     @Published var locations : [LocationModel] = []
     
     public func getAllLocations() async throws {
@@ -28,14 +27,6 @@ public class LocationViewModel : ObservableObject {
         let locationData = try JSONDecoder().decode([LocationModel].self, from: data)
         locationData.forEach { ld in
             self.locations.append(ld)
-        }
-    }
-    
-    public func printAllLocations(){
-        if(!locations.isEmpty){
-            for location in locations{
-                print(location.name)
-            }
         }
     }
 }

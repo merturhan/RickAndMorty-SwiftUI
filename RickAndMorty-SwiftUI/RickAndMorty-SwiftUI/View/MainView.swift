@@ -26,18 +26,19 @@ struct MainView: View {
         
         
         ZStack{
+            
             //SplashScreenView
             if(isActiveSplashScreen){
                 if(decider.isEmpty){
                     SplashScreenView(splashScreenText: "Welcome!")
                         .task {
                             do{
+                                //Request for all locations and characters which are in the first location
                                 try await lvm.getAllLocations()
                                 try await cvm.getCharacters(locationID: 0, lvm: lvm)
                             }catch{
                                 print("error")
                             }
-                            print(cvm.characters.count)
                         }
 
                 }else{
@@ -45,17 +46,16 @@ struct MainView: View {
                         SplashScreenView(splashScreenText: "Hello!")
                             .task {
                                 do{
+                                    //Take all items in first scene
                                     try await lvm.getAllLocations()
                                     try await cvm.getCharacters(locationID: 0, lvm: lvm)
                                 }catch{
                                     print("error")
                                 }
-                                print(cvm.characters.count)
                             }
                     }
                 }
             }
-            
             //After SplashScreenView
             else{
                 HomeScreen(lvm: lvm, cvm: cvm)
@@ -64,8 +64,7 @@ struct MainView: View {
         
         //SplashScreenView countdown
         .onAppear{
-            
-            DispatchQueue.main.asyncAfter(deadline: .now()+2.5){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2){
                 withAnimation {
                     self.isActiveSplashScreen = false
                     if(decider.isEmpty){
